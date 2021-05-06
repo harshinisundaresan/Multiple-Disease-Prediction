@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>  
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Model1</title>
+        <style>
+        body{
+            background-image:url("{% static 'images/img1.jpg'%}");
+        }
+        .main{
+            position:fixed;
+            top:140px;
+            left:410px;
+            width:550px;
+            background-color:#fff;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+        }
+        h2{
+            color:#0086b3;
+            font-size:30px;
+            font-weight:bold;
+        }
+        input[type=submit]{
+        background-color:#4dc3ff;
+        border:2px;
+        color:white;
+        padding:16px 32px;
+        cursor:pointer;
+        margin-top:15px;
+    }
+        </style>
+    </head>
+    <body>
+    <div align='center' class='main'>
+        <h2>Please enter the following information:</h2>
+        <form action="{% url 'result3' %}">
+        <table>
+            <tr>
+                <td align="right">Age</td>
+                <td align="left"><input type="text" step="any" required name="Age"></td>
+            </tr>
+            <tr>
+                <td align="right">Gender</td>
+                <td align="left"><input type="text" step="any" required name="Gender"></td>
+            </tr>
+            <tr>
+                <td align="right">Total_Bilirubin</td>
+                <td align="left"><input type="text" step="any" required name="Total_Bilirubin"></td>
+            </tr>
+            <tr>
+                <td align="right">Direct_Bilirubin</td>
+                <td align="left"><input type="text" step="any" required name="Direct_Bilirubin"></td>
+            </tr>
+            <tr>
+                <td align="right">Alkaline_Phosphotase</td>
+                <td align="left"><input type="text" step="any" required name="Alkaline_Phosphotase"></td>
+            </tr>
+            <tr>
+                <td align="right">Alamine_Aminotransferase</td>
+                <td align="left"><input type="text" step="any" required name="Alamine_Aminotransferase"></td>
+            </tr>
+            <tr>
+                <td align="right">Aspartate_Aminotransferase</td>
+                <td align="left"><input type="text" step="any" required name="Aspartate_Aminotransferase"></td>
+            </tr>
+            <tr>
+                <td align="right">Total_Protiens</td>
+                <td align="left"><input type="text" step="any" required name="Total_Protiens"></td>
+            </tr>
+            <tr>
+                <td align="right">Albumin</td>
+                <td align="left"><input type="text" step="any" required name="Albumin"></td>
+            </tr>
+            <tr>
+                <td align="right">Albumin_and_Globulin_Ratio</td>
+                <td align="left"><input type="text" step="any" required name="Albumin_and_Globulin_Ratio"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Predict" />
+        </form>
+    </body>
+</html>

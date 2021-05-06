@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>  
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Model1</title>
+        <style>
+        body{
+            background-image:url("{% static 'images/img1.jpg'%}");
+
+        }
+        .main{
+            position:fixed;
+            top:140px;
+            left:410px;
+            width:550px;
+            background-color:#fff;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+        }
+        h2{
+            color:#0086b3;
+            font-size:30px;
+            font-weight:bold;
+        }
+        input[type=submit]{
+        background-color:#4dc3ff;
+        border:2px;
+        color:white;
+        padding:16px 32px;
+        cursor:pointer;
+        margin-top:15px;
+    }
+        </style>
+    </head>
+    <body>
+    <div align='center' class='main'>
+        <h2>Please enter the following information:</h2>
+        <form action="{% url 'result1' %}">
+        <table>
+            <tr>
+                <td align="right">Pregnancies</td>
+                <td align="left"><input type="text" step="any" required name="Pregnancies"></td>
+            </tr>
+            <tr>
+                <td align="right">Glucose</td>
+                <td align="left"><input type="text" step="any" required name="Glucose"></td>
+            </tr>
+            <tr>
+                <td align="right">BloodPressure</td>
+                <td align="left"><input type="text" step="any" required name="BloodPressure"></td>
+            </tr>
+            <tr>
+                <td align="right">SkinThickness</td>
+                <td align="left"><input type="text" step="any" required name="SkinThickness"></td>
+            </tr>
+            <tr>
+                <td align="right">Insulin</td>
+                <td align="left"><input type="text" step="any" required name="Insulin"></td>
+            </tr>
+            <tr>
+                <td align="right">BMI</td>
+                <td align="left"><input type="text" step="any" required name="BMI"></td>
+            </tr>
+            <tr>
+                <td align="right">DiabetesPedigreeFunction</td>
+                <td align="left"><input type="text" step="any" required name="DiabetesPedigreeFunction"></td>
+            </tr>
+            <tr>
+                <td align="right">Age</td>
+                <td align="left"><input type="text" step="any" required name="Age"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Predict" />
+        </form>
+    </body>
+</html>

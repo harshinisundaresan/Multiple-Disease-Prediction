@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>  
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Results</title>
+        <style>
+        body{
+            background-image:url("{% static 'images/img1.jpg'%}");
+        }
+        .main{
+            position:fixed;
+            top:140px;
+            left:410px;
+            width:550px;
+            background-color:#fff;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+        }
+        </style>
+    </head>
+    <body>
+    <div align='center' class='main'>
+        <h2> {{ans}}</h2>
+        <h5><a href="{% url 'home' %}">click here to go home</a></h5>
+    </div>
+    </body>
+</html>

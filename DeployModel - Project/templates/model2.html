@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>  
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Model1</title>
+        <style>
+        body{
+            background-image:url("{% static 'images/img1.jpg'%}");
+        }
+        .main{
+            position:fixed;
+            top:140px;
+            left:410px;
+            width:550px;
+            background-color:#fff;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+        }
+        h2{
+            color:#0086b3;
+            font-size:30px;
+            font-weight:bold;
+        }
+        input[type=submit]{
+        background-color:#4dc3ff;
+        border:2px;
+        color:white;
+        padding:16px 32px;
+        cursor:pointer;
+        margin-top:15px;
+    }
+        </style>
+    </head>
+    <body>
+    <div align='center' class='main'>
+        <h2>Please enter the following information:</h2>
+        <form action="{% url 'result2' %}">
+        <table>
+            <tr>
+                <td align="right">age</td>
+                <td align="left"><input type="text" step="any" required name="age"></td>
+            </tr>
+            <tr>
+                <td align="right">sex</td>
+                <td align="left"><input type="text" step="any" required name="sex"></td>
+            </tr>
+            <tr>
+                <td align="right">chest pain type</td>
+                <td align="left"><input type="text" step="any" required name="cp"></td>
+            </tr>
+            <tr>
+                <td align="right">resting blood pressure</td>
+                <td align="left"><input type="text" step="any" required name="trestbps"></td>
+            </tr>
+            <tr>
+                <td align="right">serum cholestoral</td>
+                <td align="left"><input type="text" step="any" required name="chol"></td>
+            </tr>
+            <tr>
+                <td align="right">fasting blood sugar</td>
+                <td align="left"><input type="text" step="any" required name="fbs"></td>
+            </tr>
+            <tr>
+                <td align="right">resting electrocardiographic results</td>
+                <td align="left"><input type="text" step="any" required name="restecg"></td>
+            </tr>
+            <tr>
+                <td align="right">maximum heart rate achieved</td>
+                <td align="left"><input type="text" step="any" required name="thalach"></td>
+            </tr>
+            <tr>
+                <td align="right">exercise induced angina</td>
+                <td align="left"><input type="text" step="any" required name="exang"></td>
+            </tr>
+            <tr>
+                <td align="right">oldpeak</td>
+                <td align="left"><input type="text" step="any" required name="oldpeak"></td>
+            </tr>
+            <tr>
+                <td align="right">the slope of the peak exercise ST segment</td>
+                <td align="left"><input type="text" step="any" required name="slope"></td>
+            </tr>
+            <tr>
+                <td align="right">number of major vessels (0-3) colored by flourosopy</td>
+                <td align="left"><input type="text" step="any" required name="ca"></td>
+            </tr>
+            <tr>
+                <td align="right">thal</td>
+                <td align="left"><input type="text" step="any" required name="thal"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Predict" />
+        </form>
+    </body>
+</html>
